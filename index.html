@@ -1,89 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captura Alumnos Documentos</title>
+
     <style>
-        body{
-            background-color: #2fafff;
-            font-family: Arial, sans-serif;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            min-height: 100vh;
+            padding: 40px;
+        }
+
         h1{
             text-align: center;
-            color: #333;
-            margin-top: 35px;
+            color: white;
+            margin-bottom: 35px;
             font-style: italic;
+            font-size: 38px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
         }
+
+        form{
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
         table{
-            width: 80%;
-            border-collapse: collapse;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 12px;
         }
+
         td{
-            border: 1px solid #333;
             padding: 10px;
+            vertical-align: middle;
         }
+
+        td:first-child{
+            width: 30%;
+            text-align: right;
+        }
+
         label{
+            color: white;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             font-style: italic;
         }
-        
+
         input,
         select,
         textarea{
-            font-size: 16px;
-
-        }
-        input[type="text"],
-        input[type="number"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        input[type="password"],
-        input[type="url"],
-        textarea,
-        select{
             width: 100%;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+            background: rgba(255,255,255,0.95);
+            transition: 0.3s;
         }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+            transform: scale(1.01);
+            box-shadow: 0 0 10px rgba(255,255,255,0.6);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"]{
+            width: auto;
+            margin-right: 5px;
+            transform: scale(1.1);
+        }
+
+        input[type="color"]{
+            height: 50px;
+            padding: 5px;
+        }
+
+        input[type="range"]{
+            padding: 0;
+        }
+
+        input[type="file"]{
+            background: white;
+            padding: 10px;
+        }
+
+        textarea{
+            resize: none;
+        }
+
         .botones{
             text-align: center;
-            margin-top: 20px;
-        }
-        button{
-            font-size: 16px;
-            padding: 10px 20px;
-            margin:  10px;
-            cursor: pointer;
+            margin-top: 30px;
         }
 
+        button{
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        button:hover{
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        @media(max-width: 768px){
+
+            body{
+                padding: 15px;
+            }
+
+            form{
+                width: 100%;
+                padding: 20px;
+            }
+
+            table,
+            tr,
+            td{
+                display: block;
+                width: 100%;
+            }
+
+            td:first-child{
+                text-align: left;
+                margin-bottom: 5px;
+            }
+
+            h1{
+                font-size: 28px;
+            }
+        }
 
     </style>
 </head>
+
 <body>
+
     <h1>Modificación de Alumnos</h1>
+
     <form>
+
         <table>
-        
-        <!--nombre del alumno-->
+
+            <!--nombre del alumno-->
             <tr>
-                <td align="right">
+                <td>
                     <label>Apellido Paterno</label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Apellido Materno</label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Nombre del Alumno</label>
                 </td>
                 <td>
@@ -93,105 +202,116 @@
 
             <!--Carrera-->
             <tr>
-                <td align="right">
+                <td>
                     <label>ID Carrera</label>
                 </td>
                 <td>
-                    <input type="number" value="74" style="width: 50px;">
+                    <input type="number" value="74" style="width: 80px; display:inline-block;">
 
-                    <select style="width: 300px;">
-                        <option>Ingeniería en Sistemas </option>
-                        <option>Ingenieria en Desarrollo de Software</option>
+                    <select style="width: calc(100% - 100px); display:inline-block;">
+                        <option>Ingeniería en Sistemas</option>
+                        <option>Ingeniería en Desarrollo de Software</option>
                         <option>Administración</option>
-
                     </select>
                 </td>
             </tr>
-        <!--sistema educativo-->
+
+            <!--sistema educativo-->
             <tr>
-                <td align="right">
+                <td>
                     <label>ID Sistema Educativo</label>
                 </td>
                 <td>
-                    <input type="number" value="1" style="width: 50px;">
-                    <select style="width:200px;">
+                    <input type="number" value="1" style="width: 80px; display:inline-block;">
+
+                    <select style="width: calc(100% - 100px); display:inline-block;">
                         <option>Presencial</option>
                         <option>En Línea</option>
                     </select>
                 </td>
             </tr>
-        <!--otros datos-->
+
+            <!--otros datos-->
             <tr>
-                <td align="right">
+                <td>
                     <label>Tel. Celular</label>
                 </td>
                 <td>
                     <input type="tel">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Teléfono</label>
                 </td>
                 <td>
                     <input type="tel">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Correo Electrónico</label>
                 </td>
                 <td>
                     <input type="email">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Dirección</label>
                 </td>
                 <td>
                     <textarea rows="2"></textarea>
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Población</label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Código Postal</label>
                 </td>
                 <td>
-                    <input type="number" value="64180" style="width: 100px;">
+                    <input type="number" value="64180">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Estado</label>
                 </td>
                 <td>
-                    <input type="number" value="10" style="width: 50px;">
-                    <select style="width: 200px;">
+                    <input type="number" value="10" style="width: 80px; display:inline-block;">
+
+                    <select style="width: calc(100% - 100px); display:inline-block;">
                         <option>Nuevo León</option>
                         <option>Coahuila</option>
                         <option>Tamaulipas</option>
                     </select>
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Empresa</label>
                 </td>
                 <td>
                     <input type="text" value="alumnos becados sin empresa">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Sexo</label>
                 </td>
                 <td>
@@ -201,88 +321,129 @@
                     </select>
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Estado Civil</label>
                 </td>
-                <td>
-                    <input type="radio" name="estadoCivil" value="soltero"> Soltero
-                    <input type="radio" name="estadoCivil" value="casado"> Casado
-                    <input type="radio" name="estadoCivil" value="divorciado"> Divorciado
+                <td style="color:white;">
+                    <input type="radio" name="estadoCivil"> Soltero
+                    &nbsp;&nbsp;
+
+                    <input type="radio" name="estadoCivil"> Casado
+                    &nbsp;&nbsp;
+
+                    <input type="radio" name="estadoCivil"> Divorciado
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Fecha de Nacimiento</label>
                 </td>
                 <td>
                     <input type="date">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>CURP</label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
-                    <label>Contraseña</label>
+                <td>
+                    <label>Escuela de Procedencia</label>
                 </td>
                 <td>
-                    <input type="password">
+                    <input type="text" style="margin-bottom:10px;">
+
+                    <select>
+                        <option>Preparatoria No. 1</option>
+                        <option>Preparatoria No. 2</option>
+                        <option>Preparatoria No. 3</option>
+                    </select>
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
-                    <label>Pagina Web</label>
+                <td>
+                    <label>Estado donde Estudio la preparatoria</label>
                 </td>
                 <td>
-                    <input type="url">
+                    <input type="number" value="10" style="width: 80px; display:inline-block;">
+
+                    <select style="width: calc(100% - 100px); display:inline-block;">
+                        <option>Nuevo León</option>
+                        <option>Coahuila</option>
+                        <option>Tamaulipas</option>
+                        <option>CDMX</option>
+                        <option>Jalisco</option>
+                        <option>Guanajuato</option>
+                    </select>
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
+                    <label>Tetra</label>
+                </td>
+                <td>
+                    <input type="number" value="1">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
                     <label>Subir Foto</label>
                 </td>
                 <td>
                     <input type="file" accept="image/*">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Color Favorito</label>
                 </td>
                 <td>
                     <input type="color">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Nivel de Programación</label>
                 </td>
                 <td>
                     <input type="range">
                 </td>
             </tr>
+
             <tr>
-                <td align="right">
+                <td>
                     <label>Lenguaje de Programación</label>
                 </td>
-                <td>
-                    <input type="checkbox" name="lenguaje" value="python"> Python
-                    <input type="checkbox" name="lenguaje" value="java"> Java
-                    <input type="checkbox" name="lenguaje" value="javascript"> JavaScript
+                <td style="color:white;">
+                    <input type="checkbox"> Python
+                    &nbsp;&nbsp;
+
+                    <input type="checkbox"> Java
+                    &nbsp;&nbsp;
+
+                    <input type="checkbox"> JavaScript
                 </td>
             </tr>
 
         </table>
+
         <div class="botones">
             <button type="submit">Guardar</button>
             <button type="reset">Limpiar</button>
         </div>
+
     </form>
-</body>
-</html>
