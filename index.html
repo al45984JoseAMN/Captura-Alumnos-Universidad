@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura Alumnos Documentos</title>
+    <style>
+        body{
+            background-color: #2fafff;
+            font-family: Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+            margin-top: 35px;
+            font-style: italic;
+        }
+        table{
+            width: 80%;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid #333;
+            padding: 10px;
+        }
+        label{
+            font-weight: bold;
+            font-size: 18px;
+            font-style: italic;
+        }
+        
+        input,
+        select,
+        textarea{
+            font-size: 16px;
+
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"],
+        input[type="url"],
+        textarea,
+        select{
+            width: 100%;
+        }
+        .botones{
+            text-align: center;
+            margin-top: 20px;
+        }
+        button{
+            font-size: 16px;
+            padding: 10px 20px;
+            margin:  10px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Modificación de Alumnos</h1>
+    <form>
+        <table>
+        
+        <!--nombre del alumno-->
+            <tr>
+                <td align="right">
+                    <label>Apellido Paterno</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Apellido Materno</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Nombre del Alumno</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <!--Carrera-->
+            <tr>
+                <td align="right">
+                    <label>ID Carrera</label>
+                </td>
+                <td>
+                    <input type="number" value="74" style="width: 50px;">
+
+                    <select style="width: 300px;">
+                        <option>Ingeniería en Sistemas </option>
+                        <option>Ingenieria en Desarrollo de Software</option>
+                        <option>Administración</option>
+
+                    </select>
+                </td>
+            </tr>
+        <!--sistema educativo-->
+            <tr>
+                <td align="right">
+                    <label>ID Sistema Educativo</label>
+                </td>
+                <td>
+                    <input type="number" value="1" style="width: 50px;">
+                    <select style="width:200px;">
+                        <option>Presencial</option>
+                        <option>En Línea</option>
+                    </select>
+                </td>
+            </tr>
+        <!--otros datos-->
+            <tr>
+                <td align="right">
+                    <label>Tel. Celular</label>
+                </td>
+                <td>
+                    <input type="tel">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Teléfono</label>
+                </td>
+                <td>
+                    <input type="tel">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Correo Electrónico</label>
+                </td>
+                <td>
+                    <input type="email">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Dirección</label>
+                </td>
+                <td>
+                    <textarea rows="2"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Población</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Código Postal</label>
+                </td>
+                <td>
+                    <input type="number" value="64180" style="width: 100px;">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Estado</label>
+                </td>
+                <td>
+                    <input type="number" value="10" style="width: 50px;">
+                    <select style="width: 200px;">
+                        <option>Nuevo León</option>
+                        <option>Coahuila</option>
+                        <option>Tamaulipas</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Empresa</label>
+                </td>
+                <td>
+                    <input type="text" value="alumnos becados sin empresa">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Sexo</label>
+                </td>
+                <td>
+                    <select>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Estado Civil</label>
+                </td>
+                <td>
+                    <input type="radio" name="estadoCivil" value="soltero"> Soltero
+                    <input type="radio" name="estadoCivil" value="casado"> Casado
+                    <input type="radio" name="estadoCivil" value="divorciado"> Divorciado
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Fecha de Nacimiento</label>
+                </td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>CURP</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Contraseña</label>
+                </td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Pagina Web</label>
+                </td>
+                <td>
+                    <input type="url">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Subir Foto</label>
+                </td>
+                <td>
+                    <input type="file" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Color Favorito</label>
+                </td>
+                <td>
+                    <input type="color">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Nivel de Programación</label>
+                </td>
+                <td>
+                    <input type="range">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>Lenguaje de Programación</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="lenguaje" value="python"> Python
+                    <input type="checkbox" name="lenguaje" value="java"> Java
+                    <input type="checkbox" name="lenguaje" value="javascript"> JavaScript
+                </td>
+            </tr>
+
+        </table>
+        <div class="botones">
+            <button type="submit">Guardar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+    </form>
+</body>
+</html>
