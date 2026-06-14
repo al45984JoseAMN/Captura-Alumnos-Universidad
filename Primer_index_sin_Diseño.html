@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captura Alumnos Documentos</title>
+
+    <!--Estilo de sombras -->
+    <link rel="stylesheet" href="style-sombras.css">
     <style>
+        /*Nota: en caso de usar tablas y no div es <tr id="nombre-del-id"> en vez de <div id="nombre-del-id"> */
+
         body{
             background-color: #2fafff;
             font-family: Arial, sans-serif;
@@ -28,6 +33,65 @@
             font-size: 18px;
             font-style: italic;
         }
+        #apellido-paterno {
+           /* border-color:#1e010f;
+            border-style:solid;
+            border-top-width: 15px; 
+            border-left-width: 25px;
+            border-right-width: 35px;
+            border-bottom-width: 20px; */
+            border: 5px solid cyan;
+            border-radius: 20%;
+            background-color: #ff00bb;
+            width: 100px;
+            height: 30px;
+          /*  padding-top: 15px;
+            padding-left: 20px;
+            padding-right: 30px;
+            padding-bottom: 10px; */
+            /*padding: 5px;*/
+            margin-top: 15px;
+            margin-left: 12px;
+            margin-right: 30px;
+            margin-bottom: 27px;
+        }
+         #carrera {
+            background-color: hsl(359, 100%, 50%);
+            width: 100px;
+            height: 30px;
+        }
+        #correo-electronico {
+            /*degradado lineal*/
+            background:linear-gradient(45deg, #ff00bb, #ff0077);
+            background:radial-gradient(blue,cyan,pink);
+            width: 100px;
+            height: 30px;
+        }
+        /*transparencia*/
+        table #estado {
+            background-color:transparent;
+            background-color:aquamarine;
+            background-color:rgba(255, 0, 255, 0.5);
+            background-color:hsl(300, 100%, 50%);
+            width: 100px;
+            height: 30px;
+        }
+        table #apellido-materno {
+            background-color: #ede4ea;
+            width: 100px;
+            height: 30px;
+        }
+        table #direccion {
+            background-color: #8800ff;
+            width: 100px;
+            height: 30px;
+        }
+        table #nivel-de-programacion {
+            background-color: #8bd84c;
+            width: 100px;
+            height: 30px;
+        }
+
         
         input,
         select,
@@ -56,7 +120,7 @@
             margin:  10px;
             cursor: pointer;
         }
-
+      
 
     </style>
 </head>
@@ -67,15 +131,16 @@
         
         <!--nombre del alumno-->
             <tr>
-                <td align="right">
+                <td align="right" id="apellido-paterno">
                     <label>Apellido Paterno</label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
-            <tr>
+            <tr id="apellido-materno">
                 <td align="right">
+                
                     <label>Apellido Materno</label>
                 </td>
                 <td>
@@ -92,7 +157,8 @@
             </tr>
 
             <!--Carrera-->
-            <tr>
+            <tr id="carrera">
+
                 <td align="right">
                     <label>ID Carrera</label>
                 </td>
@@ -108,7 +174,7 @@
                 </td>
             </tr>
         <!--sistema educativo-->
-            <tr>
+            <tr >
                 <td align="right">
                     <label>ID Sistema Educativo</label>
                 </td>
@@ -137,7 +203,8 @@
                     <input type="tel">
                 </td>
             </tr>
-            <tr>
+            <tr id="correo-electronico">
+                
                 <td align="right">
                     <label>Correo Electrónico</label>
                 </td>
@@ -145,12 +212,12 @@
                     <input type="email">
                 </td>
             </tr>
-            <tr>
+            <tr id="direccion">
                 <td align="right">
                     <label>Dirección</label>
                 </td>
                 <td>
-                    <textarea rows="2"></textarea>
+                   <textarea rows="2"></textarea>
                 </td>
             </tr>
             <tr>
@@ -170,6 +237,7 @@
                 </td>
             </tr>
             <tr>
+                <div id="estado">
                 <td align="right">
                     <label>Estado</label>
                 </td>
@@ -181,6 +249,7 @@
                         <option>Tamaulipas</option>
                     </select>
                 </td>
+                </div>
             </tr>
             <tr>
                 <td align="right">
@@ -279,7 +348,7 @@
                     <input type="color">
                 </td>
             </tr>
-            <tr>
+            <tr id="nivel-de-programacion">
                 <td align="right">
                     <label>Nivel de Programación</label>
                 </td>

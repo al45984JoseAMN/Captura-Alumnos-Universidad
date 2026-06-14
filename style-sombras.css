@@ -1,0 +1,9 @@
+/*Sombra del titulo*/
+h1{
+    text-shadow: 5px 5px 5px ;
+}
+/*sombra de la tabla*/
+table{
+    box-shadow: 8px 8px 15px;
+    background-color: aliceblue;
+}
